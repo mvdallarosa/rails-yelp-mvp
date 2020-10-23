@@ -1,0 +1,10 @@
+<% @restaurants.each do |restaurant| %>
+  <div class="card mb-4">
+    <h5 class="card-header font-weight-light text-dark"> <%= restaurant.category.upcase %> </h5>
+    <div class="card-body">
+      <h5 class="card-title"> <%= restaurant.name %> </h5>
+      <p class="card-text"><%= restaurant.address %></p>
+      <%= link_to "Check it out", restaurant_path(restaurant), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsYelpMvp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-light bg-light border-bottom border-dark mb-5">
+      <a href="/restaurants" class="navbar-brand font-weight-bolder">RateYourRestaurant</a>
+      <%= link_to "Add a new restaurant", new_restaurant_path, class: "navbar-brand font-weight-lighter" %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
